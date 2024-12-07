@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Garage or Recycling Center</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Waste Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="indexs.html">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="recycling.html">Recycling</a></li>
+                <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="complaint.html">Complaints</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="eco-tips.html">Eco Tips</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Garage Section -->
+    <section class="container my-4">
+        <h2 class="text-center mb-4">Find Nearby Garages or Recycling Centers</h2>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <div class="form-group">
+                        <label for="location">Enter Your Location:</label>
+                        <input type="text" class="form-control" id="location" placeholder="City or Zip Code">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="findGarages()">Find Garages</button>
+                </form>
+            </div>
+        </div>
+        <div class="results mt-4">
+            <h4 class="text-center">Results</h4>
+            <ul id="garageList" class="list-group"></ul>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Domestic Waste Management. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Simulated Results -->
+    <script>
+        function findGarages() {
+            const location = document.getElementById('location').value;
+            const garageList = document.getElementById('garageList');
+            garageList.innerHTML = ""; // Clear existing results
+            
+            if (location) {
+                // Simulated results
+                const garages = [
+                    { name: "Green Eco Garage", address: "123 Eco Street, Green City" },
+                    { name: "Recycling Hub", address: "456 Waste Lane, Clean Town" },
+                    { name: "Earth Saver Garage", address: "789 Nature Blvd, EcoVille" }
+                ];
+
+                garages.forEach(garage => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'list-group-item';
+                    listItem.textContent = `${garage.name} - ${garage.address}`;
+                    garageList.appendChild(listItem);
+                });
+            } else {
+                alert('Please enter a location!');
+            }
+        }
+    </script>
+</body>
+</html>

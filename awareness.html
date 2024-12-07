@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Awareness</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Waste Management</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="schedule.html">schdule</a></li>
+            <li class="nav-item"><a class="nav-link" href="recycling.html">Recycling</a></li>
+            <li class="nav-item"><a class="nav-link" href="garage.html">Find Garage</a></li>
+            <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="complaint.html">Complaints</a></li>
+            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+            <li class="nav-item"><a class="nav-link" href="eco-tips.html">Eco Tips</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Awareness Section -->
+    <section class="container my-4 text-center">
+        <h2 class="mb-4">Environmental Awareness</h2>
+        <p class="lead">"The Earth does not belong to us: we belong to the Earth."</p>
+        <p>Let's raise awareness and take responsibility for our planet.</p>
+        <button class="btn btn-success" onclick="showAwarenessAlert()">Learn More</button>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Domestic Waste Management. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function showAwarenessAlert() {
+            Swal.fire({
+                title: 'Take Action!',
+                text: "Small steps lead to big changes. Start by reducing waste, recycling, and conserving water and energy.",
+                icon: 'info',
+                confirmButtonText: 'Got it!',
+            });
+        }
+    </script>
+</body>
+</html>

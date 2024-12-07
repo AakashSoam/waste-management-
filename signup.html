@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup for Waste Management Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <style>
+        /* Enhanced Signup Section Styles */
+        #signup-section {
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #signup-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            background-color: #ffffff;
+            font-size: 1rem;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            background-color: #e6f7ff; /* Light blue on focus */
+            border-color: #3399ff;
+            box-shadow: 0 0 5px rgba(51, 153, 255, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #3399ff;
+            border-color: #3399ff;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #2575fc; /* Darker blue on hover */
+            border-color: #2575fc;
+        }
+
+        @media (max-width: 768px) {
+            #signup-section {
+                padding: 20px;
+            }
+
+            .form-control {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Signup for Waste Management Services</h1>
+    </header>
+
+    <section id="signup-section" class="container my-4">
+        <h2 class="text-center mb-4">Join Us to Help Keep the Environment Clean</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Waste Management Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for handling form submission and displaying SweetAlert
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the form from reloading the page on submit
+
+            // Get form values
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            // Check if all fields are filled
+            if (fullName && email && phone) {
+                // Show success message using SweetAlert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Thank You for Signing Up!',
+                    text: 'You will receive a confirmation email soon.',
+                    confirmButtonColor: '#2575fc',
+                    confirmButtonText: 'Great!',
+                    allowOutsideClick: false
+                }).then(() => {
+                    // Clear the form after submission
+                    document.getElementById("signup-form").reset();
+                });
+            } else {
+                // If any field is empty, show an error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please fill in all fields!',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    </script>
+</body>
+</html>

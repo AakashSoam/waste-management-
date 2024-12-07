@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Section</title>
+    <style>
+        /* Recycling Section Styles */
+        #recycling {
+            background-color: #f2f9f5;
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #recycling:hover {
+            transform: scale(1.02);
+        }
+
+        #recycling h2 {
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Info Boxes */
+        .recycling-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .info-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .info-box h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .info-box p, .info-box ul {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .recycling-info .info-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Recycling Steps */
+        .recycling-steps {
+            margin-bottom: 40px;
+        }
+
+        .recycling-steps ol {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .recycling-steps li {
+            margin-bottom: 10px;
+        }
+
+        .recycling-cta {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .recycling-cta p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .recycling-cta button {
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 15px 30px;
+            border: 2px solid #4CAF50;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .recycling-cta button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Recycling Section -->
+    <section id="recycling">
+        <h2>Recycling: How You Can Make a Difference</h2>
+        <p class="intro-text">Recycling is an important step towards reducing waste and conserving the environment. By recycling everyday items, you help reduce the amount of waste going to landfills, save energy, and protect our planet!</p>
+        <div class="recycling-info">
+            <div class="info-box">
+                <h3>Why Recycle?</h3>
+                <p>Recycling helps reduce the need for raw materials, conserves energy, and reduces pollution. Recycling paper, plastic, and metals allows them to be reused and turned into new products, lowering environmental impact.</p>
+            </div>
+            <div class="info-box">
+                <h3>Common Recyclable Materials</h3>
+                <ul>
+                    <li>Paper</li>
+                    <li>Plastic Bottles and Containers</li>
+                    <li>Glass Bottles</li>
+                    <li>Metal Cans</li>
+                    <li>Cardboard</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>How to Recycle Correctly</h3>
+                <p>It is important to separate recyclable materials from non-recyclable waste. Make sure to clean items before recycling to ensure their reuse.</p>
+            </div>
+        </div>
+        <div class="recycling-steps">
+            <h3>Steps for Effective Recycling</h3>
+            <ol>
+                <li>Clean your recyclable items.</li>
+                <li>Separate recyclables into the correct bins.</li>
+                <li>Ensure items are not contaminated with food waste or liquids.</li>
+                <li>Take the recyclables to your local recycling facility.</li>
+            </ol>
+        </div>
+        <div class="recycling-cta">
+            <p>Join us in making a difference today. Start recycling now!</p>
+            <button id="cta-button">Learn More About Recycling</button>
+        </div>
+    </section>
+
+    <script>
+        // Recycling Button Interaction
+        document.getElementById('cta-button').addEventListener('click', function() {
+            alert("Thank you for your interest! Check out our Recycling Guide for more information.");
+        });
+    </script>
+</body>
+</html>

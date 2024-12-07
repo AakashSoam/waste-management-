@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #2575fc;
+            padding: 5px 10px;
+        }
+
+        nav .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 1.1rem;
+            margin-right: 20px;
+            font-weight: 600;
+        }
+
+        nav .navbar-nav .nav-link:hover {
+            color: #fff !important;
+            background-color: #3399ff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section Styles */
+        #hero-section {
+            background: url('head1.jpg') no-repeat center center;
+            background-size: cover;
+            height: 60vh;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        #hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        #hero-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section Title Styles */
+        .section-title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2rem;
+            color: #2575fc;
+            font-weight: bold;
+        }
+
+        .section-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .section-content .card {
+            width: 18rem;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section-content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-body h5 {
+            font-size: 1.2rem;
+            color: #2575fc;
+            font-weight: 600;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .btn-custom {
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #3399ff;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2575fc;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Waste Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href=signup.html>Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href=schedule.html>Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href=garage.html>Nearest Garage</a></li>
+                <li class="nav-item"><a class="nav-link" href=recycling.html>Recycling</a></li>
+                <li class="nav-item"><a class="nav-link" href=contact.html>Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href=awareness.html>Awareness</a></li>
+                <li class="nav-item"><a class="nav-link" href=eco-tips.html>Eco tips</a></li>
+                <li class="nav-item"><a class="nav-link" href=complaint.html>Complaint</a></li>
+                <li class="nav-item"><a class="nav-link" href=feedback.html>Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-section">
+        <h1>Welcome to Domestic Waste Management Services</h1>
+        <p>Join us to keep the environment clean and safe for everyone.</p>
+    </section>
+
+    <!-- Sections -->
+    <section id="signup-section">
+        <div class="container">
+            <h2 class="section-title">SIGN UP NOW</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="signup.png" alt="Signup">
+                    <div class="card-body">
+                        <h5 class="card-title">Sign Up for Services</h5>
+                        <p>Join our waste management program for a cleaner world!</p>
+                        <a href="signup.html" class="btn-custom">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule-section">
+        <div class="container">
+            <h2 class="section-title">SCHEDULE PICKUP</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="s.png" alt="Schedule">
+                    <div class="card-body">
+                        <h5 class="card-title">Schedule Your Pickup</h5>
+                        <p>Plan your waste pickup and make your surroundings cleaner.</p>
+                        <a href= "schedule.html"class="btn-custom">Schedule Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recycling-section">
+        <div class="container">
+            <h2 class="section-title">Recycling Awareness</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="r.jpg" alt="Recycling">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn About Recycling</h5>
+                        <p>Find out how recycling can help protect the environment.</p>
+                        <a href="recycling.html" class="btn-custom">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="contact.jpg" alt="Contact">
+                    <div class="card-body">
+                        <h5 class="card-title">Get in Touch</h5>
+                        <p>Have any questions? We're here to help!</p>
+                        <a href="contact.html" class="btn-custom">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awareness-section">
+        <div class="container">
+            <h2 class="section-title">Waste Awareness</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="aware.jpg" alt="Awareness">
+                    <div class="card-body">
+                        <h5 class="card-title">Waste Management Awareness</h5>
+                        <p>Create awareness in society about Domestic Waste management</p>
+                        <a href="awareness.html" class="btn-custom">Awareness</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback-section">
+        <div class="container">
+            <h2 class="section-title">Waste Awareness</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="feedback.jpg" alt="Feedback">
+                    <div class="card-body">
+                        <h5 class="card-title">Feedback</h5>
+                        <p>click on below to give Feedback.</p>
+                        <a href="feedback.html" class="btn-custom">Feedback</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="feedback-section">
+            <div class="container">
+                <h2 class="section-title">Eco-Tips</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <img src="tips.jpg" alt="tips">
+                        <div class="card-body">
+                            <h5 class="card-title">Eco-Tips</h5>
+                            <p>Read about sustainable waste practices and tips.</p>
+                            <a href="eco-tips.html" class="btn-custom">Get Tips</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Waste Management Service. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

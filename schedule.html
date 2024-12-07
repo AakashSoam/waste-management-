@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic Waste Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="styles.css">
+        
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Waste Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="recycling.html">Recycling</a></li>
+                <li class="nav-item"><a class="nav-link" href="garage.html">Find Garage</a></li>
+                <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="complaint.html">Complaints</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="eco-tips.html">Eco Tips</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Schedule Pickup Section -->
+    <section id="schedule-section" class="container my-4">
+        <h2 class="text-center mb-4">Waste Collection Schedule</h2>
+        <p class="text-center">Please choose a date for pickup</p>
+        
+        <!-- Date Picker Input -->
+        <div class="form-group text-center">
+            <label for="scheduleDate">Select Pickup Date:</label>
+            <input type="date" class="form-control w-50 mx-auto" id="scheduleDate">
+        </div>
+        
+        <!-- Schedule Pickup Button -->
+        <button class="btn btn-success btn-lg d-block mx-auto" onclick="schedulePickup()">Schedule Pickup</button>
+    </section>
+
+    <script>
+        // Schedule Pickup (with date picker validation)
+        function schedulePickup() {
+            let selectedDate = document.getElementById('scheduleDate').value;
+
+            if (selectedDate) {
+                // Confirm the scheduled date with a SweetAlert
+                Swal.fire({
+                    title: 'Pickup Scheduled!',
+                    text: 'Your pickup is scheduled for ' + selectedDate,
+                    icon: 'success',
+                    confirmButtonText: 'Great!'
+                });
+            } else {
+                // Show an error message if no date is selected
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Please select a date for the pickup.',
+                    icon: 'error',
+                    confirmButtonText: 'Okay'
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
